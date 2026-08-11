@@ -49,6 +49,12 @@ PASS seo-regression
 5/5 eval cases passed
 ```
 
+The current deterministic benchmark summary, including case-level results, is in [`docs/benchmarks/`](docs/benchmarks/). Regenerate it with:
+
+```bash
+python scripts/run_benchmarks.py
+```
+
 ## Use with a coding agent
 
 Point the agent at `AGENTS.md`, then ask it to run one of the workflows:

@@ -22,12 +22,12 @@ Credits would be used to evaluate coding agents against reproducible ecommerce r
 
 I am the primary maintainer. I design the fixtures, agent protocol, deterministic checks, and review workflows, and I maintain the public repository and contribution process.
 
-## Evidence to add before applying
+## Current evidence
 
-- Real release tags
-- Real GitHub stars/forks/contributors, if any
-- Real examples of external usage
-- Real issues/PRs from users
-- Links to benchmark runs or CI history
-
-Never fabricate these fields.
+- Public repository: `https://github.com/harukiseller-droid/commerce-agent-bench`
+- Release: [`v0.1.0`](https://github.com/harukiseller-droid/commerce-agent-bench/releases/tag/v0.1.0)
+- CI workflow: [`CI`](https://github.com/harukiseller-droid/commerce-agent-bench/actions/workflows/ci.yml)
+- Maintainer PR history: [PR #6](https://github.com/harukiseller-droid/commerce-agent-bench/pull/6) and [PR #7](https://github.com/harukiseller-droid/commerce-agent-bench/pull/7)
+- Deterministic benchmark report: [`docs/benchmarks/`](docs/benchmarks/)
+- Public roadmap: [GitHub Issues](https://github.com/harukiseller-droid/commerce-agent-bench/issues)
+- External usage, stars, forks, and third-party contributions: `UNKNOWN`; do not represent them as adoption evidence without verified data.
