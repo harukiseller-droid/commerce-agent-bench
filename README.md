@@ -28,7 +28,7 @@ This repository turns those problems into reusable skills, review recipes, and s
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/commerce-agent-bench.git
+git clone https://github.com/harukiseller-droid/commerce-agent-bench.git
 cd commerce-agent-bench
 python -m venv .venv
 source .venv/bin/activate
