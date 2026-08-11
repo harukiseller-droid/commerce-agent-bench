@@ -1,5 +1,4 @@
 # commerce-agent-bench
-
 Open-source skills, workflows, and reproducible evals for AI coding agents maintaining ecommerce codebases.
 
 `commerce-agent-bench` gives coding agents a shared protocol for reviewing WooCommerce, Shopify, and static ecommerce projects without inventing product facts or silently turning assumptions into claims. It combines portable agent instructions with deterministic regression fixtures that can run locally and in CI.
