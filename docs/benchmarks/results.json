@@ -1,0 +1,76 @@
+{
+  "benchmark": "deterministic-evals",
+  "source_commit": "80d50ec",
+  "run_date": "2026-08-12",
+  "fixture_count": 7,
+  "expected_findings": 10,
+  "detected_findings": 10,
+  "missed_findings": 0,
+  "unexpected_findings": 0,
+  "false_positives": 0,
+  "cases": [
+    {
+      "id": "product-page-basics",
+      "fixture": "broken-product-page",
+      "expected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"],
+      "detected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "schema-integrity",
+      "fixture": "schema-conflict",
+      "expected_rule_ids": ["SCHEMA_FAKE_RATING"],
+      "detected_rule_ids": ["SCHEMA_FAKE_RATING"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "woocommerce-hook-regression",
+      "fixture": "duplicate-hooks",
+      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
+      "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "accessibility-regression",
+      "fixture": "accessibility-regression",
+      "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"],
+      "detected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "seo-regression",
+      "fixture": "seo-regression",
+      "expected_rule_ids": ["SEO_TITLE_MISSING"],
+      "detected_rule_ids": ["SEO_TITLE_MISSING"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "shopify-product-card-accessibility",
+      "fixture": "shopify-product-card",
+      "expected_rule_ids": ["HTML_IMG_ALT_MISSING"],
+      "detected_rule_ids": ["HTML_IMG_ALT_MISSING"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    },
+    {
+      "id": "woocommerce-product-summary-hook",
+      "fixture": "woocommerce-product-summary",
+      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
+      "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
+      "missing_rule_ids": [],
+      "unexpected_rule_ids": [],
+      "status": "PASS"
+    }
+  ]
+}
