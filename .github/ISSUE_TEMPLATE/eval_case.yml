@@ -1,0 +1,19 @@
+name: Eval case proposal
+description: Propose a reproducible ecommerce regression fixture
+title: "[eval] "
+labels: ["eval"]
+body:
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: WooCommerce, Shopify, static, other
+    validations:
+      required: true
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression
+      description: Describe the smallest reproducible failure mode.
+    validations:
+      required: true

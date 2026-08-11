@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a false positive, false negative, or broken fixture
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Please avoid private merchant/customer data.
+    validations:
+      required: true

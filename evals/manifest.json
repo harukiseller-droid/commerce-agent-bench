@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "product-page-basics",
+      "fixture": "broken-product-page",
+      "expected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"]
+    },
+    {
+      "id": "schema-integrity",
+      "fixture": "schema-conflict",
+      "expected_rule_ids": ["SCHEMA_FAKE_RATING"]
+    },
+    {
+      "id": "woocommerce-hook-regression",
+      "fixture": "duplicate-hooks",
+      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"]
+    },
+    {
+      "id": "accessibility-regression",
+      "fixture": "accessibility-regression",
+      "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"]
+    },
+    {
+      "id": "seo-regression",
+      "fixture": "seo-regression",
+      "expected_rule_ids": ["SEO_TITLE_MISSING"]
+    }
+  ]
+}
