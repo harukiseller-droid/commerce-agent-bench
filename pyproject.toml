@@ -9,7 +9,7 @@ description = "Open-source skills, workflows, and reproducible evals for AI codi
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "Your Name"}]
+authors = [{name = "harukiseller-droid"}]
 keywords = ["ai-agents", "ecommerce", "woocommerce", "shopify", "evals", "codex"]
 classifiers = [
   "Programming Language :: Python :: 3",

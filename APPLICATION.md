@@ -4,7 +4,7 @@ Replace bracketed fields with your real information. Do not inflate usage, stars
 
 ## Project URL
 
-`https://github.com/[YOUR_GITHUB_USERNAME]/commerce-agent-bench`
+`https://github.com/harukiseller-droid/commerce-agent-bench`
 
 ## What is the project?
 
