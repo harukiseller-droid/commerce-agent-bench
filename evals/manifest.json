@@ -25,6 +25,16 @@
       "id": "seo-regression",
       "fixture": "seo-regression",
       "expected_rule_ids": ["SEO_TITLE_MISSING"]
+    },
+    {
+      "id": "shopify-product-card-accessibility",
+      "fixture": "shopify-product-card",
+      "expected_rule_ids": ["HTML_IMG_ALT_MISSING"]
+    },
+    {
+      "id": "woocommerce-product-summary-hook",
+      "fixture": "woocommerce-product-summary",
+      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"]
     }
   ]
 }

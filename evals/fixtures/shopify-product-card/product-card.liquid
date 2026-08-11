@@ -1,0 +1,5 @@
+<article class="product-card">
+  <img src="{{ product.featured_image | image_url: width: 800 }}">
+  <h2>{{ product.title | escape }}</h2>
+  <p>{{ product.price | money }}</p>
+</article>
