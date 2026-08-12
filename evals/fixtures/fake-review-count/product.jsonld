@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Synthetic Review Fixture",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "reviewCount": "842"
+  }
+}
