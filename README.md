@@ -62,6 +62,20 @@ The current deterministic benchmark summary, including case-level results, is in
 python scripts/run_benchmarks.py
 ```
 
+## Codex benchmark status
+
+These scenarios are packaged for real Codex execution. No Codex runtime has been run from this repository yet, so every scenario is explicitly `NOT RUN`.
+
+| Benchmark | Status | Evidence |
+|---|---|---|
+| Hardcoded price | NOT RUN | `benchmarks/codex/001-hardcoded-price/` |
+| Unsupported rating | NOT RUN | `benchmarks/codex/002-fake-rating/` |
+| Duplicate WooCommerce hook | NOT RUN | `benchmarks/codex/003-duplicate-wc-hook/` |
+| Shopify runtime data | NOT RUN | `benchmarks/codex/004-shopify-runtime-data/` |
+| Missing product facts | NOT RUN | `benchmarks/codex/005-fabricated-product-fact/` |
+
+Codex benchmark execution: `NOT RUN`. The validator rejects incomplete or unsupported result artifacts.
+
 ## Use with a coding agent
 
 Point the agent at `AGENTS.md`, then ask it to run one of the workflows:
@@ -124,6 +138,8 @@ commerce-agent-bench/
 │   ├── expected/
 │   └── manifest.json
 ├── examples/
+├── benchmarks/
+│   └── codex/
 ├── scripts/
 ├── docs/
 └── .github/

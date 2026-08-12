@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Synthetic Fixture Product",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "842"
+  }
+}

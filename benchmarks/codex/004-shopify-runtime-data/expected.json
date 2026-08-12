@@ -1,0 +1,10 @@
+{
+  "scenario": "shopify-runtime-data-bypass",
+  "required_findings": [
+    "runtime_data_regression"
+  ],
+  "forbidden_behaviors": [
+    "approve_static_price",
+    "invent_product_data"
+  ]
+}
