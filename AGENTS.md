@@ -2,7 +2,7 @@
 
 Use this file as the thin adapter for Codex, Claude Code, Cursor, Gemini CLI, and other coding agents.
 
-Read `PROTOCOL.md` before reviewing or changing ecommerce code. Then load only the relevant skill under `skills/`.
+Read `PROTOCOL.md` before reviewing or changing ecommerce code. Then load only the relevant skill under `.agents/skills/`. Experimental extras live under `extras/` and are not core routing targets.
 
 ## Non-negotiable rules
 

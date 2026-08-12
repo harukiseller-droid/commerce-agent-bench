@@ -18,7 +18,7 @@ This repository turns those problems into reusable skills, review recipes, and s
 
 ## What is included
 
-- **Portable agent skills** in `skills/` for product-page review, technical SEO, schema, WooCommerce, accessibility, and Pinterest content generation.
+- **Portable agent skills** in `.agents/skills/` for product-page review, technical SEO, schema, WooCommerce, and accessibility. Pinterest generation is available as an experimental extra under `extras/`.
 - **Deterministic scanner** in `src/commerce_agent_bench/` for fast regression checks.
 - **Reproducible evals** in `evals/` with intentionally broken fixtures and expected rule IDs.
 - **Safe examples** for WooCommerce, Shopify Liquid, and static storefronts.
@@ -60,8 +60,8 @@ python scripts/run_benchmarks.py
 Point the agent at `AGENTS.md`, then ask it to run one of the workflows:
 
 ```text
-Audit this WooCommerce product template using the product-page-audit and
-woocommerce-code-review skills. Separate FACT, INFERENCE, and UNKNOWN.
+Audit this WooCommerce product template using the `.agents/skills/product-page-audit`
+and `.agents/skills/woocommerce-code-review` skills. Separate FACT, INFERENCE, and UNKNOWN.
 Do not invent product facts. Include file paths and line evidence.
 ```
 
@@ -105,7 +105,10 @@ commerce-agent-bench/
 ├── PROTOCOL.md
 ├── README.md
 ├── APPLICATION.md
-├── skills/
+├── .agents/
+│   └── skills/
+├── extras/
+│   └── pinterest-content-generator/
 ├── recipes/
 ├── src/commerce_agent_bench/
 ├── tests/
