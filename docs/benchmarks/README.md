@@ -1,6 +1,6 @@
 # Deterministic benchmark report
 
-This report covers the seven cases currently registered in `evals/manifest.json`. It measures exact rule-ID agreement between each fixture's expected findings and the scanner output.
+This report covers the 19 cases currently registered in `evals/manifest.json`. It measures exact rule-ID agreement between each fixture's expected findings and the scanner output.
 
 Run command:
 
@@ -8,13 +8,13 @@ Run command:
 python scripts/run_benchmarks.py
 ```
 
-The recorded run used source commit `80d50ec` on 2026-08-12.
+The recorded run used source commit `1dcdfad` on 2026-08-12.
 
 | Metric | Result |
 |---|---:|
-| Fixture cases | 7 |
-| Expected findings | 10 |
-| Detected findings | 10 |
+| Fixture cases | 19 |
+| Expected findings | 23 |
+| Detected findings | 23 |
 | Missed findings | 0 |
 | Unexpected findings | 0 |
 | False positives against the manifest | 0 |

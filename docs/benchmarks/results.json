@@ -1,76 +1,32 @@
 {
   "benchmark": "deterministic-evals",
-  "source_commit": "80d50ec",
+  "source_commit": "1dcdfad",
   "run_date": "2026-08-12",
-  "fixture_count": 7,
-  "expected_findings": 10,
-  "detected_findings": 10,
+  "fixture_count": 19,
+  "expected_findings": 23,
+  "detected_findings": 23,
   "missed_findings": 0,
   "unexpected_findings": 0,
   "false_positives": 0,
   "cases": [
-    {
-      "id": "product-page-basics",
-      "fixture": "broken-product-page",
-      "expected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"],
-      "detected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "schema-integrity",
-      "fixture": "schema-conflict",
-      "expected_rule_ids": ["SCHEMA_FAKE_RATING"],
-      "detected_rule_ids": ["SCHEMA_FAKE_RATING"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "woocommerce-hook-regression",
-      "fixture": "duplicate-hooks",
-      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
-      "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "accessibility-regression",
-      "fixture": "accessibility-regression",
-      "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"],
-      "detected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "seo-regression",
-      "fixture": "seo-regression",
-      "expected_rule_ids": ["SEO_TITLE_MISSING"],
-      "detected_rule_ids": ["SEO_TITLE_MISSING"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "shopify-product-card-accessibility",
-      "fixture": "shopify-product-card",
-      "expected_rule_ids": ["HTML_IMG_ALT_MISSING"],
-      "detected_rule_ids": ["HTML_IMG_ALT_MISSING"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    },
-    {
-      "id": "woocommerce-product-summary-hook",
-      "fixture": "woocommerce-product-summary",
-      "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
-      "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"],
-      "missing_rule_ids": [],
-      "unexpected_rule_ids": [],
-      "status": "PASS"
-    }
+    {"id": "product-page-basics", "fixture": "broken-product-page", "expected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"], "detected_rule_ids": ["HTML_IMG_ALT_MISSING", "SEO_META_DESCRIPTION_MISSING", "SEO_TITLE_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "schema-integrity", "fixture": "schema-conflict", "expected_rule_ids": ["SCHEMA_FAKE_RATING", "SCHEMA_FAKE_REVIEW_COUNT"], "detected_rule_ids": ["SCHEMA_FAKE_RATING", "SCHEMA_FAKE_REVIEW_COUNT"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "woocommerce-hook-regression", "fixture": "duplicate-hooks", "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"], "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "accessibility-regression", "fixture": "accessibility-regression", "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"], "detected_rule_ids": ["HTML_BUTTON_NAME_MISSING", "HTML_IMG_ALT_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "seo-regression", "fixture": "seo-regression", "expected_rule_ids": ["SEO_TITLE_MISSING"], "detected_rule_ids": ["SEO_TITLE_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "shopify-product-card-accessibility", "fixture": "shopify-product-card", "expected_rule_ids": ["HTML_IMG_ALT_MISSING"], "detected_rule_ids": ["HTML_IMG_ALT_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "woocommerce-product-summary-hook", "fixture": "woocommerce-product-summary", "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"], "detected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "hardcoded-price", "fixture": "hardcoded-price", "expected_rule_ids": ["UNSAFE_HARDCODED_PRICE"], "detected_rule_ids": ["UNSAFE_HARDCODED_PRICE"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "fake-review-count", "fixture": "fake-review-count", "expected_rule_ids": ["SCHEMA_FAKE_REVIEW_COUNT"], "detected_rule_ids": ["SCHEMA_FAKE_REVIEW_COUNT"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "fake-stock", "fixture": "fake-stock", "expected_rule_ids": ["UNSAFE_HARDCODED_STOCK"], "detected_rule_ids": ["UNSAFE_HARDCODED_STOCK"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "unsafe-template-escaping", "fixture": "unsafe-template-escaping", "expected_rule_ids": ["HTML_UNESCAPED_TEMPLATE_OUTPUT"], "detected_rule_ids": ["HTML_UNESCAPED_TEMPLATE_OUTPUT"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "missing-price-currency", "fixture": "missing-price-currency", "expected_rule_ids": ["SCHEMA_PRICE_CURRENCY_MISSING"], "detected_rule_ids": ["SCHEMA_PRICE_CURRENCY_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "canonical-conflict", "fixture": "canonical-conflict", "expected_rule_ids": ["SEO_CANONICAL_CONFLICT"], "detected_rule_ids": ["SEO_CANONICAL_CONFLICT"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "duplicate-product-schema", "fixture": "duplicate-product-schema", "expected_rule_ids": ["SCHEMA_DUPLICATE_PRODUCT"], "detected_rule_ids": ["SCHEMA_DUPLICATE_PRODUCT"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "fabricated-shipping", "fixture": "fabricated-shipping", "expected_rule_ids": ["UNSAFE_HARDCODED_SHIPPING"], "detected_rule_ids": ["UNSAFE_HARDCODED_SHIPPING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "fabricated-dimensions", "fixture": "fabricated-dimensions", "expected_rule_ids": ["UNSAFE_HARDCODED_DIMENSIONS"], "detected_rule_ids": ["UNSAFE_HARDCODED_DIMENSIONS"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "invalid-product-jsonld", "fixture": "invalid-product-jsonld", "expected_rule_ids": ["SCHEMA_INVALID_JSONLD"], "detected_rule_ids": ["SCHEMA_INVALID_JSONLD"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "shopify-static-price", "fixture": "shopify-static-price", "expected_rule_ids": ["SHOPIFY_STATIC_PRODUCT_PRICE"], "detected_rule_ids": ["SHOPIFY_STATIC_PRODUCT_PRICE"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"},
+    {"id": "empty-cta", "fixture": "empty-cta", "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING"], "detected_rule_ids": ["HTML_BUTTON_NAME_MISSING"], "missing_rule_ids": [], "unexpected_rule_ids": [], "status": "PASS"}
   ]
 }
