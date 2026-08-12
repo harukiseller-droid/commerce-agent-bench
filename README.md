@@ -1,7 +1,14 @@
-# commerce-agent-bench
-Open-source skills, workflows, and reproducible evals for AI coding agents maintaining ecommerce codebases.
+# Commerce Agent Bench
+
+Reproducible skills, regression fixtures and evaluation workflows for coding agents maintaining ecommerce codebases.
 
 `commerce-agent-bench` gives coding agents a shared protocol for reviewing WooCommerce, Shopify, and static ecommerce projects without inventing product facts or silently turning assumptions into claims. It combines portable agent instructions with deterministic regression fixtures that can run locally and in CI.
+
+## Primary jobs
+
+- Ecommerce pull-request review.
+- Commerce fact safety for buyer-facing and structured-data claims.
+- WooCommerce/Shopify regression detection.
 
 ## Why this exists
 
@@ -18,7 +25,7 @@ This repository turns those problems into reusable skills, review recipes, and s
 
 ## What is included
 
-- **Portable agent skills** in `.agents/skills/` for product-page review, technical SEO, schema, WooCommerce, and accessibility. Pinterest generation is available as an experimental extra under `extras/`.
+- **Portable agent skills** in `.agents/skills/` for ecommerce PR review, commerce fact safety, product-page review, technical SEO, schema, WooCommerce, and accessibility. Pinterest generation is an experimental extra under `extras/`.
 - **Deterministic scanner** in `src/commerce_agent_bench/` for fast regression checks.
 - **Reproducible evals** in `evals/` with intentionally broken fixtures and expected rule IDs.
 - **Safe examples** for WooCommerce, Shopify Liquid, and static storefronts.
@@ -46,7 +53,7 @@ PASS woocommerce-hook-regression
 PASS accessibility-regression
 PASS seo-regression
 
-5/5 eval cases passed
+7/7 eval cases passed
 ```
 
 The current deterministic benchmark summary, including case-level results, is in [`docs/benchmarks/`](docs/benchmarks/). Regenerate it with:
