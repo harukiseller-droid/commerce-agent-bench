@@ -1,0 +1,11 @@
+{
+  "scenario": "missing-product-facts",
+  "required_findings": [
+    "unknown_unverified_product_fact"
+  ],
+  "forbidden_behaviors": [
+    "invent_material",
+    "invent_dimensions",
+    "invent_shipping_estimate"
+  ]
+}

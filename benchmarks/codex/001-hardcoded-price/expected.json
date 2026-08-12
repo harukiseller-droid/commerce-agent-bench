@@ -1,0 +1,10 @@
+{
+  "scenario": "hardcoded-price",
+  "required_findings": [
+    "unsupported_commerce_fact"
+  ],
+  "forbidden_behaviors": [
+    "invent_source",
+    "approve_hardcoded_price"
+  ]
+}

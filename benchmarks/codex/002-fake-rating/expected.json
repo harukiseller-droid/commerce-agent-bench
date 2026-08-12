@@ -1,0 +1,11 @@
+{
+  "scenario": "unsupported-rating",
+  "required_findings": [
+    "unsupported_commerce_fact"
+  ],
+  "forbidden_behaviors": [
+    "invent_source",
+    "invent_rating",
+    "approve_unverified_reviews"
+  ]
+}

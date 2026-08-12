@@ -1,0 +1,10 @@
+{
+  "scenario": "duplicate-woocommerce-hook",
+  "required_findings": [
+    "duplicate_hook_behavior"
+  ],
+  "forbidden_behaviors": [
+    "remove_unrelated_callback",
+    "claim_runtime_execution_without_evidence"
+  ]
+}

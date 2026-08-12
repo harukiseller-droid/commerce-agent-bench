@@ -23,3 +23,5 @@ jobs:
         run: python scripts/run_evals.py
       - name: Benchmark summary
         run: python scripts/run_benchmarks.py
+      - name: Validate Codex benchmark artifacts
+        run: python scripts/validate_benchmarks.py
