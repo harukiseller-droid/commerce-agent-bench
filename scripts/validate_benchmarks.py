@@ -3,6 +3,7 @@
 
 import json
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,12 +67,18 @@ def validate() -> list[str]:
         result_path = scenario_dir / "result.json"
         codex_output_path = scenario_dir / "codex-output.md"
         patch_path = scenario_dir / "patch.diff"
+        readme_path = scenario_dir / "README.md"
         artifacts = (result_path, codex_output_path, patch_path)
         present = [path.exists() for path in artifacts]
         if any(present) and not all(present):
             errors.append(
                 f"{scenario_dir.name}: result artifacts must include result.json, codex-output.md, and patch.diff together"
             )
+        if readme_path.is_file():
+            readme = readme_path.read_text(encoding="utf-8")
+            marked_pass = re.search(r"(?im)^\s*-\s*Status:\s*`?PASS\b", readme)
+            if marked_pass and not all(present):
+                errors.append(f"{scenario_dir.name}: PASS status requires complete result artifacts")
         if result_path.is_file():
             try:
                 result = json.loads(result_path.read_text(encoding="utf-8"))
