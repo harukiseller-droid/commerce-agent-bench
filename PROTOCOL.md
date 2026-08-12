@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-This protocol governs AI-agent review and maintenance of ecommerce codebases. It is intentionally platform-agnostic and is supplemented by skills for WooCommerce, Shopify, SEO, schema, accessibility, product pages, and content generation.
+This protocol governs AI-agent review and maintenance of ecommerce codebases. It is intentionally platform-agnostic and is supplemented by core skills under `.agents/skills/` for WooCommerce, Shopify, SEO, schema, accessibility, and product pages. Experimental content workflows live outside the core skill set.
 
 ## 2. Evidence classes
 
