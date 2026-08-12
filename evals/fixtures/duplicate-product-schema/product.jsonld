@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "Product", "name": "Synthetic Product One"},
+    {"@type": "Product", "name": "Synthetic Product Two"}
+  ]
+}

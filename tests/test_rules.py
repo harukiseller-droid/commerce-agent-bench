@@ -16,7 +16,9 @@ def test_broken_product_page():
 
 
 def test_schema_conflict():
-    assert "SCHEMA_FAKE_RATING" in ids("schema-conflict")
+    found = ids("schema-conflict")
+    assert "SCHEMA_FAKE_RATING" in found
+    assert "SCHEMA_FAKE_REVIEW_COUNT" in found
 
 
 def test_duplicate_hooks():
@@ -32,3 +34,22 @@ def test_accessibility_regression():
 def test_seo_regression():
     found = ids("seo-regression")
     assert "SEO_TITLE_MISSING" in found
+
+
+def test_extended_regressions():
+    expected = {
+        "hardcoded-price": "UNSAFE_HARDCODED_PRICE",
+        "fake-review-count": "SCHEMA_FAKE_REVIEW_COUNT",
+        "fake-stock": "UNSAFE_HARDCODED_STOCK",
+        "unsafe-template-escaping": "HTML_UNESCAPED_TEMPLATE_OUTPUT",
+        "missing-price-currency": "SCHEMA_PRICE_CURRENCY_MISSING",
+        "canonical-conflict": "SEO_CANONICAL_CONFLICT",
+        "duplicate-product-schema": "SCHEMA_DUPLICATE_PRODUCT",
+        "fabricated-shipping": "UNSAFE_HARDCODED_SHIPPING",
+        "fabricated-dimensions": "UNSAFE_HARDCODED_DIMENSIONS",
+        "invalid-product-jsonld": "SCHEMA_INVALID_JSONLD",
+        "shopify-static-price": "SHOPIFY_STATIC_PRODUCT_PRICE",
+        "empty-cta": "HTML_BUTTON_NAME_MISSING",
+    }
+    for fixture, rule_id in expected.items():
+        assert rule_id in ids(fixture)

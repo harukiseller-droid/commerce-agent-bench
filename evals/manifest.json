@@ -9,7 +9,7 @@
     {
       "id": "schema-integrity",
       "fixture": "schema-conflict",
-      "expected_rule_ids": ["SCHEMA_FAKE_RATING"]
+      "expected_rule_ids": ["SCHEMA_FAKE_RATING", "SCHEMA_FAKE_REVIEW_COUNT"]
     },
     {
       "id": "woocommerce-hook-regression",
@@ -35,6 +35,66 @@
       "id": "woocommerce-product-summary-hook",
       "fixture": "woocommerce-product-summary",
       "expected_rule_ids": ["WOOCOMMERCE_DUPLICATE_HOOK"]
+    },
+    {
+      "id": "hardcoded-price",
+      "fixture": "hardcoded-price",
+      "expected_rule_ids": ["UNSAFE_HARDCODED_PRICE"]
+    },
+    {
+      "id": "fake-review-count",
+      "fixture": "fake-review-count",
+      "expected_rule_ids": ["SCHEMA_FAKE_REVIEW_COUNT"]
+    },
+    {
+      "id": "fake-stock",
+      "fixture": "fake-stock",
+      "expected_rule_ids": ["UNSAFE_HARDCODED_STOCK"]
+    },
+    {
+      "id": "unsafe-template-escaping",
+      "fixture": "unsafe-template-escaping",
+      "expected_rule_ids": ["HTML_UNESCAPED_TEMPLATE_OUTPUT"]
+    },
+    {
+      "id": "missing-price-currency",
+      "fixture": "missing-price-currency",
+      "expected_rule_ids": ["SCHEMA_PRICE_CURRENCY_MISSING"]
+    },
+    {
+      "id": "canonical-conflict",
+      "fixture": "canonical-conflict",
+      "expected_rule_ids": ["SEO_CANONICAL_CONFLICT"]
+    },
+    {
+      "id": "duplicate-product-schema",
+      "fixture": "duplicate-product-schema",
+      "expected_rule_ids": ["SCHEMA_DUPLICATE_PRODUCT"]
+    },
+    {
+      "id": "fabricated-shipping",
+      "fixture": "fabricated-shipping",
+      "expected_rule_ids": ["UNSAFE_HARDCODED_SHIPPING"]
+    },
+    {
+      "id": "fabricated-dimensions",
+      "fixture": "fabricated-dimensions",
+      "expected_rule_ids": ["UNSAFE_HARDCODED_DIMENSIONS"]
+    },
+    {
+      "id": "invalid-product-jsonld",
+      "fixture": "invalid-product-jsonld",
+      "expected_rule_ids": ["SCHEMA_INVALID_JSONLD"]
+    },
+    {
+      "id": "shopify-static-price",
+      "fixture": "shopify-static-price",
+      "expected_rule_ids": ["SHOPIFY_STATIC_PRODUCT_PRICE"]
+    },
+    {
+      "id": "empty-cta",
+      "fixture": "empty-cta",
+      "expected_rule_ids": ["HTML_BUTTON_NAME_MISSING"]
     }
   ]
 }

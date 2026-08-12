@@ -52,8 +52,22 @@ PASS schema-integrity
 PASS woocommerce-hook-regression
 PASS accessibility-regression
 PASS seo-regression
+PASS shopify-product-card-accessibility
+PASS woocommerce-product-summary-hook
+PASS hardcoded-price
+PASS fake-review-count
+PASS fake-stock
+PASS unsafe-template-escaping
+PASS missing-price-currency
+PASS canonical-conflict
+PASS duplicate-product-schema
+PASS fabricated-shipping
+PASS fabricated-dimensions
+PASS invalid-product-jsonld
+PASS shopify-static-price
+PASS empty-cta
 
-7/7 eval cases passed
+19/19 eval cases passed
 ```
 
 The current deterministic benchmark summary, including case-level results, is in [`docs/benchmarks/`](docs/benchmarks/). Regenerate it with:
@@ -112,9 +126,19 @@ verification: how to prove the fix worked
 | `HTML_BUTTON_NAME_MISSING` | medium | Detect empty unnamed buttons |
 | `SEO_TITLE_MISSING` | high | Detect HTML documents without `<title>` |
 | `SEO_META_DESCRIPTION_MISSING` | medium | Detect missing meta descriptions |
-| `SCHEMA_FAKE_RATING` | high | Flag suspicious hard-coded rating/review values |
+| `SCHEMA_FAKE_RATING` | high | Flag suspicious hard-coded rating values |
+| `SCHEMA_FAKE_REVIEW_COUNT` | high | Flag suspicious hard-coded review counts |
 | `WOOCOMMERCE_DUPLICATE_HOOK` | high | Flag duplicate product-summary hook registration |
 | `UNSAFE_HARDCODED_PRICE` | medium | Flag likely hard-coded commerce prices |
+| `UNSAFE_HARDCODED_STOCK` | medium | Flag likely hard-coded stock or availability |
+| `HTML_UNESCAPED_TEMPLATE_OUTPUT` | high | Flag unescaped Liquid product output |
+| `SCHEMA_PRICE_CURRENCY_MISSING` | medium | Flag schema prices without currency evidence |
+| `SEO_CANONICAL_CONFLICT` | high | Flag multiple canonical links |
+| `SCHEMA_DUPLICATE_PRODUCT` | high | Flag duplicate Product entities |
+| `UNSAFE_HARDCODED_SHIPPING` | medium | Flag hard-coded shipping or delivery times |
+| `UNSAFE_HARDCODED_DIMENSIONS` | medium | Flag hard-coded product dimensions |
+| `SCHEMA_INVALID_JSONLD` | high | Flag invalid JSON-LD fixtures |
+| `SHOPIFY_STATIC_PRODUCT_PRICE` | medium | Flag static Shopify prices |
 
 These checks are intentionally small and explainable. They are not a replacement for platform linters, browser tests, or human review.
 
