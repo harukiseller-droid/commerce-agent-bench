@@ -1,0 +1,30 @@
+name: Optional Codex review (NOT VERIFIED)
+
+on:
+  workflow_dispatch:
+    inputs:
+      enable:
+        description: "Opt in to the not-yet-verified Codex review placeholder"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  codex-review:
+    if: ${{ inputs.enable == true && vars.CODEX_REVIEW_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check optional integration status
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "NOT VERIFIED: OPENAI_API_KEY is not configured."
+            exit 0
+          fi
+          echo "NOT VERIFIED: no Codex execution adapter is implemented or tested in this repository."
+          exit 0

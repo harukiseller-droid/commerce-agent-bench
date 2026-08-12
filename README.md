@@ -39,9 +39,11 @@ git clone https://github.com/harukiseller-droid/commerce-agent-bench.git
 cd commerce-agent-bench
 python -m venv .venv
 source .venv/bin/activate
-pip install -e .
+python -m pip install -e . pytest
 commerce-agent-bench evals/fixtures/broken-product-page --format text
+pytest -q
 python scripts/run_evals.py
+python scripts/validate_benchmarks.py
 ```
 
 Expected eval summary:
@@ -89,6 +91,8 @@ These scenarios are packaged for real Codex execution. No Codex runtime has been
 | Missing product facts | NOT RUN | `benchmarks/codex/005-fabricated-product-fact/` |
 
 Codex benchmark execution: `NOT RUN`. The validator rejects incomplete or unsupported result artifacts.
+
+The optional `.github/workflows/codex-review.yml` workflow is manual, opt-in, and currently `NOT VERIFIED`. It does not run in normal CI, call an API, or claim Codex execution. Enablement requires an explicit repository variable and a configured secret, but an actual adapter must still be implemented and tested before it can review a pull request.
 
 ## Use with a coding agent
 

@@ -18,3 +18,5 @@ python scripts/validate_benchmarks.py
 ```
 
 `Codex benchmark execution: NOT RUN` is the current repository-wide status until an actual Codex runtime produces evidence.
+
+The optional GitHub workflow is `.github/workflows/codex-review.yml`. It is manual, disabled unless explicitly opted into, and `NOT VERIFIED`; normal CI never requires an API secret.
